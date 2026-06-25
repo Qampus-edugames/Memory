@@ -22,10 +22,12 @@ async function loadData() {
   const response = await fetch(file);
   const text = await response.text();
 
-  pairs = text.split("\n").slice(1).map(line => {
-    const [begrip, uitleg] = line.split(";");
-    return [begrip?.trim(), uitleg?.trim()];
-  }).filter(p => p[0] && p[1]);
+  
+pairs = text.split("\n").slice(1).map(line => {
+  const parts = line.includes(";") ? line.split(";") : line.split(",");
+  return [parts[0]?.trim(), parts[1]?.trim()];
+}).filter(p => p[0] && p[1]);
+
 }
 
 /* ▶️ START SPEL */
