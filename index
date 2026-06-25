@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<title>Economie Memory</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <h1>🧠 Memory</h1>
+
+  <select id="hoofdstukSelect">
+    <option value="data/h1.csv">H1</option>
+    <option value="data/h2.csv">H2</option>
+    <option value="data/h2.csv">H3</option>
+    <option value="data/h4.csv">H4</option>
+    <option value="data/h5.csv">H5</option>
+    <option value="data/h6.csv">H6</option>
+  </select>
+
+  <div id="info">Pogingen: 0 | Gevonden: 0</div>
+
+  <button onclick="startGame()">Start / Reset</button>
+
+  <div id="game"></div>
+
+  <div id="explanation"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
