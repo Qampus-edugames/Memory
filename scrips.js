@@ -23,7 +23,7 @@ async function loadData() {
   const text = await response.text();
 
   pairs = text.split("\n").slice(1).map(line => {
-    const [begrip, uitleg] = line.split(",");
+    const [begrip, uitleg] = line.split(";");
     return [begrip?.trim(), uitleg?.trim()];
   }).filter(p => p[0] && p[1]);
 }
